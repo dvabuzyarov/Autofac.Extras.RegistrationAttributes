@@ -109,7 +109,7 @@ Component registering into Autocaf container using attributes
     [As(typeof(ISomeService))]
     [SingleInstance]
     [AsCustom(typeof (DebugRegistration))]
-    class SomeServiecFake : ISomeService
+    class SomeServiceFake : ISomeService
     {
         public SomeServiecFake()
         {
@@ -129,7 +129,7 @@ Component registering into Autocaf container using attributes
     [AsCustom(typeof(ProductionRegistration))]
     [AsCustom(typeof(DevelopmentRegistration))]
     [AsCustom(typeof(ConsolidationRegistration))]
-    class SomeServiec : ISomeService
+    class SomeService : ISomeService
     {
         public SomeServiec()
         {
