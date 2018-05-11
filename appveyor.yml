@@ -1,0 +1,28 @@
+configuration: Release
+
+image: Visual Studio 2017
+clone_depth: 1
+
+dotnet_csproj:
+  patch: true
+  file: '**\*.csproj'
+  version: '{version}'
+  package_version: '{version}'
+
+before_build:
+  - dotnet restore --verbosity quiet
+
+build:
+  parallel: true
+  verbosity: minimal
+  publish_nuget: true
+
+#artifacts:
+#  - path: '**\*.nupkg'
+
+deploy:
+  provider: NuGet
+  api_key:
+    secure: iMD1Tso9r3jcIpKoc4pP/bH1WvYF/JZP2tPKRHSe9TJOYZrBKRi4f3VYr3ZctzTe
+#  on:
+#    appveyor_repo_tag: true

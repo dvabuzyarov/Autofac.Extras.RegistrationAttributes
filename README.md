@@ -30,8 +30,8 @@ Component registering into Autocaf container using attributes
 ```
 3. Call all assemblies specific Ninject modules in the main assembly
 ```cs
-    using Ninject.Extensions.MetadataRegistration;
-    using Ninject.Modules;
+    using Autofac.Extras.RegistrationAttributes.RegistrationAttributes;
+    using Autofac.Modules;
     
     namespace MainAssemblyNameSpace
     {

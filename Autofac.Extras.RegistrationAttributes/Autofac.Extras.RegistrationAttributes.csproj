@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <Version>0.0.0</Version>
+    <Authors>dvabuzyarov@gmail.com</Authors>
+    <Product>Metadata registration extras for Autofac</Product>
+    <Description>Autofac extension that allows to automatically bind a type with configuration provider through attributes.</Description>
+    <Copyright>2015 dvabuzyarov@gmail.com</Copyright>
+    <!--<GenerateDocumentationFile>true</GenerateDocumentationFile>-->
+    <!--<AssemblyOriginatorKeyFile></AssemblyOriginatorKeyFile>-->
+    <SignAssembly>false</SignAssembly>
+    <PublicSign Condition=" '$(OS)' != 'Windows_NT' ">false</PublicSign>
+    <PackageId>Autofac.Extras.RegistrationAttributes</PackageId>
+    <PackageVersion>0.0.0</PackageVersion>
+    <PackageTags>Autofac;ioc;di;attributes;bind;registration</PackageTags>
+    <PackageIconUrl>https://github.com/dvabuzyarov/Autofac.Extras.RegistrationAttributes/blob/master/logo.png</PackageIconUrl>
+    <PackageLicenseUrl>https://github.com/dvabuzyarov/Autofac.Extras.RegistrationAttributes/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/dvabuzyarov/Autofac.Extras.RegistrationAttributes</RepositoryUrl>
+    <DebugType>pdbonly</DebugType>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <NoPackageAnalysis>true</NoPackageAnalysis>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="4.8.1" />
+  </ItemGroup>
+</Project>

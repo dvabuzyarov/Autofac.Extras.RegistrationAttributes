@@ -1,12 +1,13 @@
-﻿using Autofac.Extras.RegistrationAttributes.UnitTests.ScannedAssembly;
-using Xunit;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UnitTests.ScannedAssembly;
 
 namespace Autofac.Extras.RegistrationAttributes.UnitTests
 {
+    [TestClass]
     public class ContainerBuilderExtensionsTests
     {
 
-        [Fact]
+        [TestMethod]
         public void RegistersTypesFromAssembly()
         {
             var builder = new ContainerBuilder();
@@ -15,10 +16,10 @@ namespace Autofac.Extras.RegistrationAttributes.UnitTests
             var container = builder.Build();
             var actual = container.Resolve<ITestClass>();
 
-            Assert.IsType<TestClass>(actual);
+            Assert.IsInstanceOfType(actual, typeof(TestClass));
         }        
         
-        [Fact]
+        [TestMethod]
         public void RegistersTypes()
         {
             var builder = new ContainerBuilder();
@@ -27,7 +28,7 @@ namespace Autofac.Extras.RegistrationAttributes.UnitTests
             var container = builder.Build();
             var actual = container.Resolve<ITestClass>();
 
-            Assert.IsType<TestClass>(actual);
+            Assert.IsInstanceOfType(actual, typeof(TestClass));
         }
     }
 }
